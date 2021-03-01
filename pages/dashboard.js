@@ -3,11 +3,9 @@ import Router from "next/router";
 import { UserContext } from "../lib/UserContext";
 import Loading from "../components/loading";
 
-import { useTheme } from "next-themes";
-
 const Dashboard = () => {
   const [user] = useContext(UserContext);
-  const { theme, setTheme } = useTheme();
+
 
   // Redirect to /login if not loading and no user found
   useEffect(() => {
@@ -20,9 +18,7 @@ const Dashboard = () => {
         <Loading />
       ) : (
         user?.issuer && (
-          <>
-            The current theme is: {theme}
-            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle</button>
+          <>           
             <div className="label">Welcome to your Dashboard!!!</div>
             <div className="profile-info">{user.email}</div>
             <div className="label">User Id</div>
