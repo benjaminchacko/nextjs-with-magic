@@ -15,3 +15,13 @@ const Home = () => {
 };
 
 export default Home;
+
+
+/* const Home = () => {
+  const [user] = useContext(UserContext);
+
+  return <>{user?.loading ? <Loading /> : user?.issuer && <div>You're logged in!</div>}</>;
+};
+
+export default Home;
+ */
