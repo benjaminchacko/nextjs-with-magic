@@ -1,0 +1,20 @@
+html,
+body {
+  color: #000;
+  background: #fff;
+}
+
+a {
+
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: lime;
+  background: #000;
+}
+
+[data-theme='dark'] a {
+  color: purple
+}
+
